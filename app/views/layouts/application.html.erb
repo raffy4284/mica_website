@@ -12,20 +12,29 @@
     <![endif]-->
   </head>
   <body>
-    <header class="navbar navbar-fixed-top navbar-inverse">
+    <% if full_title(yield(:title)) != 'GeekChic Style Guide' %>
+      <header class="navbar navbar-fixed-top navbar-inverse">
+        <div class="container">
+          <nav>
+            <ul class="nav navbar-nav navbar-right">
+              <li><%= link_to "Home", home_path %></li>
+              <li><%= link_to "Blog", blog_path %></li>
+              <li><%= link_to "Community", community_path %></li>
+              <li><%= link_to "About", about_path %></li>
+              <li><%= link_to "Shop", shop_path %></li>
+              <li><%= link_to "Vlog", vlog_path %></li>
+              <li><%= link_to "Submit", submit_path %></li>
+            </ul>
+          </nav>
+         </div>
+      </header>
       <div class="container">
-        <%= link_to "sample app", '#', id: "logo" %>
-        <nav>
-          <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "Home",   '#' %></li>
-            <li><%= link_to "Help",   '#' %></li>
-            <li><%= link_to "Log in", '#' %></li>
-          </ul>
-        </nav>
+        <%= yield %>
       </div>
-    </header>
-    <div class="container">
-      <%= yield %>
-    </div>
+    <% else %>
+      <div class="container">
+        <%= yield %>
+      </div>
+    <% end %>
   </body>
 </html>

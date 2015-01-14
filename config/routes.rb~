@@ -14,8 +14,8 @@ Rails.application.routes.draw do
 
   get 'blog' => 'pages#blog'
 
-  get 'submit' => 'pages#submit'
+  get 'submit' => 'pages/submit'
 
-  get 'about' => 'pages#about'
+  get 'about' => 'pages/about'
 
 end

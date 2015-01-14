@@ -5,6 +5,4 @@ module ApplicationHelper
       return base_title
     else
       return "#{page_title} | #{base_title}"
-    end
-  end
 end

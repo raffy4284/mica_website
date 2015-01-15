@@ -16,7 +16,7 @@
       <header class="navbar navbar-fixed-top navbar-inverse">
         <div class="navbar-header navbar-brand">
           GCSG
-          <img src = "https://scontent-a-dfw.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/10409726_764508276934186_7685182579448432548_n.png?oh=0451d1929997fc7fe47c7f8f6a224f82&oe=553582FF" id = "logo">
+            <%= image_tag("logo.png", :id => "img_logo") %> 
         </div>
         <div class = "container" >
           <ul class="nav navbar-nav navbar-right">
@@ -30,10 +30,12 @@
           </ul>
         </div>
       </header>
-      <div class = "contents">
-        <div class="container">
-          <%= yield %>
-        </div>
+
+
+            <%= yield %>
+
+
+      <div class = "background">
       </div>
     <% else %>
       <div class="container">
